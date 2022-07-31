@@ -1,3 +1,5 @@
 "use strict";
 
-// console.log("hello") // 연결됨
+console.log("hello")
+
+console.log("bye")
