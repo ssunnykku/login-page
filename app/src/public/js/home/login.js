@@ -16,11 +16,13 @@ function login() {
     };
     // console.log(req); 
     // console.log(JSON.stringify(req));
-    fetch("/login", {
+    fetch("/login", {          //fetch로 전달
         method: "POST",
         headers: {
             "content-Type": "application/json" 
-        }
+        },
         body: JSON.stringify(req),
-    })  
+    }).then((res) => res.json())  //Promise
+      .then(console.log);  
+    //서버에서 응답한 데이터 받기
 };
