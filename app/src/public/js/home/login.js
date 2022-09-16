@@ -1,4 +1,5 @@
 "use strict";
+//프론트에서 동작하는 JS 파일임(login ejs와 연결)
 
 const id = document.querySelector("#id"),
     psword = document.querySelector("#psword"),
@@ -25,11 +26,11 @@ function login() {
     }).then((res) => res.json())  //Promise
       .then((res) => {     
         //서버에서 응답한 데이터 받기
-        if (res.success) {
-            location.href = "/";
-        } else {
-            alert(res.msg);
-        }
+        // if (res.success) {
+        //     location.href = "/";
+        // } else {
+        //     alert(res.msg);
+        // }
       })
       .catch((err) => {
         // console.error(new Error("로그인 중 에러 발생"));
