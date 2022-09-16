@@ -3,7 +3,7 @@
 
 const id = document.querySelector("#id"),
     psword = document.querySelector("#psword"),
-    loginBtn = document.querySelector("button");
+    loginBtn = document.querySelector("#button");
 
 // console.log(id)
 // ejs에서 값이 넘어오기 전에 console.log가 실행되어 Null이 반환됨 -> difer 적용    
