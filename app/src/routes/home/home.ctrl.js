@@ -10,6 +10,9 @@ const output = {
     login : (req, res) => {
         res.render("home/login")
     },
+    register: (req, res) => {
+        res.render("home/register");
+    },
 };
 
 const process = {
@@ -19,6 +22,7 @@ const process = {
         console.log(response);
         return res.json(response);
     },
+
 };
 
 module.exports = {
