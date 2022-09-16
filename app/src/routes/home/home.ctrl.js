@@ -16,23 +16,19 @@ const process = {
         // console.log(req.body);  // body에 data가 저장되어있으니 접근..
         const id = req.body.id,
         psword = req.body.psword;
-        //  console.log(id, psword);
-
-        // const userStorage = new UserStorage(); 
-        console.log(UserStorage.getUsers());
+        const users = UserStorage.getUsers("id", "psword");
         
         const response = {};
-        // if(users.id.includes(id)) {
-        //     const idx = users.id.indexOf(id);
-        // if (users.psword[idx] === psword) {
-        //     response.success = true;
-        //     return res.json(response);
-        //     }
-        // }
+        if(users.id.includes(id)) {
+            const idx = users.id.indexOf(id);
+        if (users.psword[idx] === psword) {
+            response.success = true;
+            return res.json(response);
+            }
+        }
         response.success = false;
-        return res.json({
-            response, 
-            msg : "로그인에 실패하셨습니다."});
+        response.msg = "로그인에 실패하셨습니다";
+        return res.json(response);
     },
 };
 

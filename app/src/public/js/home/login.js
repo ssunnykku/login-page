@@ -25,12 +25,12 @@ function login() {
         body: JSON.stringify(req),
     }).then((res) => res.json())  //Promise
       .then((res) => {     
-        //서버에서 응답한 데이터 받기
-        // if (res.success) {
-        //     location.href = "/";
-        // } else {
-        //     alert(res.msg);
-        // }
+        // 서버에서 응답한 데이터 받기
+        if (res.success) {
+            location.href = "/";
+        } else {
+            alert(res.msg);
+        }
       })
       .catch((err) => {
         // console.error(new Error("로그인 중 에러 발생"));
